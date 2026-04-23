@@ -1,0 +1,77 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Library Management System Login
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+  </style>
+ </head>
+ <body class="bg-[#d9cfc3] min-h-screen flex items-center justify-center p-4">
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-6 max-w-6xl w-full">
+   <img alt="Library reading area with wooden tables and bookshelves filled with books" class="rounded-lg w-64 sm:w-72 object-cover" height="320" src="https://storage.googleapis.com/a1aa/image/b129838c-6438-450d-7143-b07adebc0c4f.jpg" width="256"/>
+   <div class="bg-[#f9f3ec] rounded-xl p-10 w-96 sm:w-[28rem] shadow-md relative" style="font-family: 'Georgia', serif;">
+    <div class="flex flex-col items-center mb-8">
+     <img alt="Stack of colorful books icon representing library" class="mb-3" height="72" src="https://storage.googleapis.com/a1aa/image/9ee0ba58-8007-47fa-01a7-581d8e16db88.jpg" width="96"/>
+     <h1 class="text-[#d2691e] text-2xl font-semibold tracking-wide">
+      LIBRARY
+     </h1>
+     <p class="text-[#d2691e] text-base font-light tracking-widest">
+      MANAGEMENT SYSTEM
+     </p>
+    </div>
+    <form id="loginForm" action="login" method="post" class="space-y-5" onsubmit="return registerUser(event)">
+        {%csrf_token%}
+     <div>
+      <label class="text-[#d2691e] text-base font-semibold flex items-center gap-3" for="username">
+       <i class="fas fa-user text-lg"></i>
+       User Name
+      </label>
+      <input class="w-full border border-[#d2691e] rounded px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#d2691e]" id="username" name="username" type="text" required/>
+     </div>
+     <div>
+      <label class="text-[#d2691e] text-base font-semibold flex items-center gap-3" for="password">
+       <i class="fas fa-lock text-lg"></i>
+       Password
+      </label>
+      <input class="w-full border border-[#d2691e] rounded px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#d2691e]" id="password" name="password" type="password" required/>
+     </div>
+     <button class="bg-[#d2691e] text-white text-base font-semibold rounded px-6 py-2 w-full hover:bg-[#b55a14] transition" type="submit">
+      Login
+     </button>
+    </form>
+    <p class="mt-6 text-center text-base text-[#d2691e]">
+     Don't have an account?
+     <a href="Register" class="Register underline hover:text-[#b55a14]">
+      Register here
+     </a>
+    </p>
+   </div>
+   <img alt="Library bookshelves filled with books in rows" class="rounded-lg w-64 sm:w-72 object-cover" height="320" src="https://storage.googleapis.com/a1aa/image/5d31f072-5258-4067-a2a8-9ac2a31c7ff3.jpg" width="256"/>
+  </div>
+  <!-- <script>
+   function registerUser(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if (!username || !password) {
+     alert('Please enter both username and password.');
+     return false;
+    }
+
+    // Simulate registration logic
+    alert(`User registered successfully!\nUsername: ${username}`);
+
+    // Clear form fields
+    document.getElementById('loginForm').reset();
+
+    return false;
+   }
+  </script> -->
+ </body>
+</html>

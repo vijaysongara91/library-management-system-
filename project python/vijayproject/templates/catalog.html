@@ -1,0 +1,457 @@
+
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Library Management System - Catalog
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col">
+  <header class="bg-white shadow-md">
+   <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+     <img alt="Library logo with open book and library text in blue and white" class="w-12 h-12" height="48" src="https://storage.googleapis.com/a1aa/image/32811c06-71b9-41c6-2f9e-8b8c5dbd05fe.jpg" width="48"/>
+     <h1 class="text-2xl font-bold text-blue-700">
+      City Library
+     </h1>
+    </div>
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-semibold">
+    
+    </nav>
+    <button aria-label="Open menu" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-700" id="mobile-menu-button">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <nav aria-label="Mobile menu" class="md:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+    <a class="block px-4 py-3 text-gray-700 font-semibold hover:bg-blue-50" href="#">
+     Home
+    </a>
+    <a class="block px-4 py-3 text-blue-700 font-bold border-l-4 border-blue-700 bg-blue-50" href="#">
+     Catalog
+    </a>
+    <a class="block px-4 py-3 text-gray-700 font-semibold hover:bg-blue-50" href="#">
+     My Account
+    </a>
+    <a class="block px-4 py-3 text-gray-700 font-semibold hover:bg-blue-50" href="#">
+     About
+    </a>
+    <a class="block px-4 py-3 text-gray-700 font-semibold hover:bg-blue-50" href="#">
+     Contact
+    </a>
+   </nav>
+  </header>
+  <main class="flex-grow container mx-auto px-4 py-8">
+   <h2 class="text-3xl font-bold text-gray-800 mb-6">
+    Library Catalog
+   </h2>
+   <form class="mb-8 flex flex-col md:flex-row md:items-center md:space-x-4 space-y-4 md:space-y-0">
+    <input aria-label="Search books" class="flex-grow border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Search by title, author, or ISBN" type="text"/>
+    <select aria-label="Filter by category" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
+     <option value="">
+      All Categories
+     </option>
+     <option value="fiction">
+      Fiction
+     </option>
+     <option value="nonfiction">
+      Non-fiction
+     </option>
+     <option value="science">
+      Science
+     </option>
+     <option value="history">
+      History
+     </option>
+     <option value="children">
+      Children
+     </option>
+     <option value="technology">
+      Technology
+     </option>
+    </select>
+    <select aria-label="Sort by" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
+     <option value="title-asc">
+      Title A-Z
+     </option>
+     <option value="title-desc">
+      Title Z-A
+     </option>
+     <option value="author-asc">
+      Author A-Z
+     </option>
+     <option value="author-desc">
+      Author Z-A
+     </option>
+     <option value="year-desc">
+      Newest First
+     </option>
+     <option value="year-asc">
+      Oldest First
+     </option>
+    </select>
+    <button aria-label="Search catalog" class="bg-blue-700 text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-800 transition" type="submit">
+     <i class="fas fa-search mr-2">
+     </i>
+     Search
+    </button>
+   </form>
+   <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of The Great Gatsby showing a stylized 1920s cityscape with a large pair of eyes in the sky" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/930ce393-6ffc-4c8c-192d-8bdbf11ef71d.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       The Great Gatsby
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by F. Scott Fitzgerald
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Fiction
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       A classic novel set in the Roaring Twenties, exploring themes of wealth, love, and the American Dream.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-green-700">
+        Available
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of A Brief History of Time showing a cosmic background with stars and a black hole" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/c71f370e-8f28-439e-a557-bc0564782624.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       A Brief History of Time
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by Stephen Hawking
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Science
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       An accessible overview of cosmology, black holes, and the nature of the universe.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-red-600">
+        Checked Out
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of The Art of Computer Programming showing a vintage computer punch card and code snippets" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/759999b6-f16f-4d26-1ffa-be9b38606e62.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       The Art of Computer Programming
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by Donald E. Knuth
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Technology
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       Comprehensive monograph on computer programming algorithms and techniques.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-green-700">
+        Available
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of The Diary of a Young Girl showing a handwritten diary page with a photo of Anne Frank" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/564a7a18-47cf-4367-6fe2-d7610cc4daf8.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       The Diary of a Young Girl
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by Anne Frank
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: History
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       The poignant diary of Anne Frank, a Jewish girl hiding during World War II.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-green-700">
+        Available
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of Harry Potter and the Sorcerer's Stone showing a young wizard with a wand and a castle in the background" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/1b047c6c-4055-4e20-f199-a7b1bcdf3c76.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       Harry Potter and the Sorcerer's Stone
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by J.K. Rowling
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Children
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       The first book in the beloved fantasy series about a young wizard's adventures.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-red-600">
+        Checked Out
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of Educated showing a mountain landscape with a lone figure walking up a steep path" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/35577b0a-25bd-49d4-972a-3462bf8a3b42.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       Educated
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by Tara Westover
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Non-fiction
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       A memoir about a woman who grows up in a strict and abusive household but eventually escapes through education.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-green-700">
+        Available
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of Clean Code showing a stylized code editor with clean and readable code lines" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/22edf104-cee6-418e-bea6-52021bf353ec.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       Clean Code
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by Robert C. Martin
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Technology
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       A handbook of agile software craftsmanship focusing on writing clean, maintainable code.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-green-700">
+        Available
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of Sapiens showing a silhouette of a human head filled with prehistoric cave paintings" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/3c77d4ae-e75f-456c-ca5c-b69925ea61ff.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       Sapiens: A Brief History of Humankind
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by Yuval Noah Harari
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Non-fiction
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       Explores the history and impact of Homo sapiens on the world.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-red-600">
+        Checked Out
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of The Cat in the Hat showing a whimsical cat wearing a tall striped hat and bow tie" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/fdc8ca6d-ea6a-4451-7fd4-878a09aa8617.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       The Cat in the Hat
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by Dr. Seuss
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Children
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       A classic children's book featuring a mischievous cat and fun rhymes.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-green-700">
+        Available
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of 1984 showing a dystopian cityscape with a large eye watching over" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/47c4eb10-7a72-4cff-df68-24e7aa350a56.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       1984
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by George Orwell
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Fiction
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       A dystopian novel about totalitarianism and surveillance.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-green-700">
+        Available
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of The Immortal Life of Henrietta Lacks showing a black and white photo of a woman with scientific imagery overlay" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/8ac9b2a1-eb7b-40c0-27fd-1338037b5fe4.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       The Immortal Life of Henrietta Lacks
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by Rebecca Skloot
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Non-fiction
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       The story of a woman whose cells were used for scientific breakthroughs without her knowledge.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-red-600">
+        Checked Out
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of To Kill a Mockingbird showing a tree with a tire swing and a small town in the background" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/b2ea74c4-9664-423e-c177-e0df389b6f75.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       To Kill a Mockingbird
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by Harper Lee
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Fiction
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       A novel about racial injustice and childhood in the American South.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-green-700">
+        Available
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of The Lean Startup showing a rocket launching with a graph and startup icons" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/261199b0-c405-40d0-99ab-ab47a67855aa.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       The Lean Startup
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by Eric Ries
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Technology
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       A methodology for developing businesses and products through validated learning.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-green-700">
+        Available
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of The Power of Habit showing a chain breaking with a bright light behind" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/5983721d-59c3-448f-4cd8-7c487f0f62a8.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       The Power of Habit
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by Charles Duhigg
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Non-fiction
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       Explores the science behind habit formation and how to change them.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-red-600">
+        Checked Out
+       </p>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover of Charlotte's Web showing a pig and a spider web with the title woven in" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/955aad1b-5203-4d62-e356-ac95ea49abea.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-bold text-gray-900 mb-1">
+       Charlotte's Web
+      </h3>
+      <p class="text-gray-700 mb-2">
+       by E.B. White
+      </p>
+      <p class="text-sm text-gray-600 mb-4">
+       Category: Children
+      </p>
+      <p class="text-sm text-gray-600 mb-4 flex-grow">
+       A heartwarming story about friendship between a pig named Wilbur and a spider named Charlotte.
+      </p>
+      <div class="mt-auto">
+       <p class="text-sm font-semibold text-green-700">
+        Available
+       </p>
+      </div>
+     </div>
+    </article>
+   </section>
+  </main>
+  <footer class="bg-white border-t border-gray-200 py-6 mt-12">
+   <div class="container mx-auto px-4 text-center text-gray-600 text-sm">
+    © 2024 City Library. All rights reserved.
+   </div>
+  </footer>
+  <script>
+   const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
+

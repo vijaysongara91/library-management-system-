@@ -1,0 +1,75 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Library Management System - About with Background Image</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <style>
+   body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    color: #f9fafb;
+  }
+  /* Overlay for better readability */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+  }
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 3rem auto 4rem;
+    background: rgba(240, 243, 247, 0.85);
+    border-radius: 1rem;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 20px 40px rgba(10, 1, 1, 0.7);
+  }
+  h1,
+  h2 {
+    color: #0f0000;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  }
+  p,
+  li {
+    color: #0f1010;
+  }
+  ul.list-disc li {
+    margin-bottom: 0.5rem;
+  }
+  </style>
+ </head>
+ <body>
+  <main>
+   <h1 class="text-4xl font-bold mb-6 text-center">About Library Management System</h1>
+   <section class="mb-6">
+    <h2 class="text-2xl font-semibold mb-3">Overview</h2>
+    <p class="leading-relaxed">
+     The Library Management System (LMS) is a comprehensive software solution designed to manage all aspects of a library's operations efficiently. It helps librarians and users to handle book inventories, borrowing, returns, and user accounts seamlessly.
+    </p>
+   </section>
+   <section class="mb-6">
+    <h2 class="text-2xl font-semibold mb-3">Key Functions</h2>
+    <ul class="list-disc list-inside space-y-2">
+     <li><strong>Catalog Management:</strong> Add, update, and organize books and other resources in the library catalog.</li>
+     <li><strong>User Management:</strong> Manage user registrations, profiles, and permissions.</li>
+     <li><strong>Borrowing and Returns:</strong> Track borrowed books, due dates, and returns efficiently.</li>
+     <li><strong>Search and Reservations:</strong> Allow users to search the catalog and reserve books.</li>
+     <li><strong>Notifications:</strong> Send reminders for due dates, overdue books, and library events.</li>
+     <li><strong>Reports and Analytics:</strong> Generate reports on library usage, popular books, and user activity.</li>
+    </ul>
+   </section>
+   <section>
+    <h2 class="text-2xl font-semibold mb-3">Benefits</h2>
+    <p class="leading-relaxed">
+     By automating routine tasks and providing easy access to information, the LMS improves the efficiency of library staff and enhances the user experience for patrons. It supports better resource management, reduces manual errors, and facilitates timely communication.
+    </p>
+   </section>
+  </main>
+ </body>
+</html>

@@ -1,0 +1,212 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Library Management System - My Books
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-blue-700 text-white shadow">
+   <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+     <img alt="Library logo with open book and library icon in blue and white" class="w-10 h-10" height="40" src="https://storage.googleapis.com/a1aa/image/79213770-83bf-4b1e-8638-4be0db76ec9c.jpg" width="40"/>
+     <h1 class="text-2xl font-semibold">
+      Library Management System
+     </h1>
+    </div>
+    <nav class="space-x-6 text-white text-lg hidden md:flex">
+     <a class="home" href="home">
+      Home
+     </a>
+     <a class="book" href="book">
+      My Books
+     </a>
+    </nav>
+    <button aria-label="Toggle menu" class="md:hidden text-white focus:outline-none" id="menu-btn">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <!-- Mobile menu -->
+   <nav class="hidden bg-blue-600 text-white px-4 py-3 space-y-2 md:hidden" id="mobile-menu">
+    <a class="home" href="home">
+     Home
+    </a>
+    <a class="book" href="book">
+     My Books
+    </a>
+   </nav>
+  </header>
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-4 py-8">
+   <h2 class="text-3xl font-semibold mb-6 text-gray-800">
+    My Books
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Book 1 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover showing a fantasy novel with a dragon flying over a castle at sunset" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/24082a92-9e06-459d-cbae-285cf76666bb.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-1 text-gray-900">
+       The Dragon's Quest
+      </h3>
+      <p class="text-gray-700 mb-2">
+       Author: Emily Stone
+      </p>
+      <p class="text-gray-600 flex-grow">
+       A thrilling fantasy adventure about a young hero's journey to save the kingdom from a fierce dragon.
+      </p>
+      <div class="mt-4 flex justify-between items-center">
+       <span class="text-sm text-green-600 font-semibold">
+        Available
+       </span>
+       <button aria-label="Return The Dragon's Quest" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">
+        Return
+       </button>
+      </div>
+     </div>
+    </div>
+    <!-- Book 2 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover showing a modern thriller with a city skyline and a mysterious figure in shadows" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/dec73e33-05de-4a8a-2a89-aeb42b9a2a4d.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-1 text-gray-900">
+       City Shadows
+      </h3>
+      <p class="text-gray-700 mb-2">
+       Author: Michael Reed
+      </p>
+      <p class="text-gray-600 flex-grow">
+       A gripping thriller that explores the dark secrets lurking beneath the city lights.
+      </p>
+      <div class="mt-4 flex justify-between items-center">
+       <span class="text-sm text-red-600 font-semibold">
+        Overdue
+       </span>
+       <button aria-label="Return City Shadows" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition">
+        Return
+       </button>
+      </div>
+     </div>
+    </div>
+    <!-- Book 3 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover showing a science fiction novel with a spaceship flying through a colorful nebula" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/18195a2d-12fd-439b-4a46-6a2edbc1f408.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-1 text-gray-900">
+       Nebula Frontier
+      </h3>
+      <p class="text-gray-700 mb-2">
+       Author: Sarah Kim
+      </p>
+      <p class="text-gray-600 flex-grow">
+       Explore the outer reaches of space in this epic sci-fi saga of discovery and survival.
+      </p>
+      <div class="mt-4 flex justify-between items-center">
+       <span class="text-sm text-green-600 font-semibold">
+        Available
+       </span>
+       <button aria-label="Return Nebula Frontier" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">
+        Return
+       </button>
+      </div>
+     </div>
+    </div>
+    <!-- Book 4 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover showing a historical fiction novel with an old map and a compass on a wooden table" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/7356b388-0f89-4ff8-13f3-1f4f6fbbefb0.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-1 text-gray-900">
+       The Lost Map
+      </h3>
+      <p class="text-gray-700 mb-2">
+       Author: David Clark
+      </p>
+      <p class="text-gray-600 flex-grow">
+       A historical fiction tale about a treasure hunt that spans continents and centuries.
+      </p>
+      <div class="mt-4 flex justify-between items-center">
+       <span class="text-sm text-green-600 font-semibold">
+        Available
+       </span>
+       <button aria-label="Return The Lost Map" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">
+        Return
+       </button>
+      </div>
+     </div>
+    </div>
+    <!-- Book 5 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover showing a romance novel with a couple holding hands on a beach at sunset" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/e69d2813-6e30-43ad-a019-c9812edebed3.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-1 text-gray-900">
+       Sunset Promises
+      </h3>
+      <p class="text-gray-700 mb-2">
+       Author: Olivia Martinez
+      </p>
+      <p class="text-gray-600 flex-grow">
+       A heartfelt romance about love, loss, and new beginnings by the sea.
+      </p>
+      <div class="mt-4 flex justify-between items-center">
+       <span class="text-sm text-red-600 font-semibold">
+        Overdue
+       </span>
+       <button aria-label="Return Sunset Promises" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition">
+        Return
+       </button>
+      </div>
+     </div>
+    </div>
+    <!-- Book 6 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Book cover showing a self-help book with a person climbing a mountain at sunrise" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/ae4c0e92-8af7-4fe3-de98-252e8ff4747e.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-xl font-semibold mb-1 text-gray-900">
+       Climb Higher
+      </h3>
+      <p class="text-gray-700 mb-2">
+       Author: James Wilson
+      </p>
+      <p class="text-gray-600 flex-grow">
+       Motivational guide to overcoming challenges and reaching your full potential.
+      </p>
+      <div class="mt-4 flex justify-between items-center">
+       <span class="text-sm text-green-600 font-semibold">
+        Available
+       </span>
+       <button aria-label="Return Climb Higher" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">
+        Return
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white py-6 mt-12">
+   <div class="container mx-auto px-4 text-center text-sm">
+    © 2025 library managemnent system, created by VIJAY SONGARA !
+   </div>
+  </footer>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
